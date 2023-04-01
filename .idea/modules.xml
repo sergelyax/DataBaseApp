@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DataBaseApp.iml" filepath="$PROJECT_DIR$/.idea/DataBaseApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MuseumDatabaseApp.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MuseumDatabaseApp.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/university.app.MuseumDatabaseApp.main.iml" filepath="$PROJECT_DIR$/.idea/modules/university.app.MuseumDatabaseApp.main.iml" />
     </modules>
   </component>
 </project>

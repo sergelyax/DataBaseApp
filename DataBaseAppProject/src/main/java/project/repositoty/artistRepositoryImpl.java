@@ -14,7 +14,7 @@ import java.util.*;
 
 
 @Repository
-public class  artistRepositoryImpl implements artistRepository {
+public class artistRepositoryImpl implements artistRepository {
 
     JDBConnect jdbConnect = new JDBConnect();
 
@@ -25,7 +25,7 @@ public class  artistRepositoryImpl implements artistRepository {
 
     @Override
     public Collection<artistDAO> findOlderThenDate(Calendar date) throws SQLException {
-        PreparedStatement prepareStatement = connection.prepareStatement("SELECT * FROM artist where dateofbirth>?");
+        PreparedStatement prepareStatement = connection.prepareStatement("SELECT * FROM artist where date_of_birth>?");
         prepareStatement.setDate(1, new Date(date.getTime().getTime()));
         ResultSet resultSet =  prepareStatement.executeQuery();
         return getArtistDAOS(resultSet);
@@ -51,11 +51,11 @@ public class  artistRepositoryImpl implements artistRepository {
             artistDAO artist = new artistDAO(
                     resultSet.getInt("id"),
                     resultSet.getString("firstname"),
-                    resultSet.getString("secondname"),
-                    resultSet.getString("familyname"),
-                    resultSet.getDate("dateofbirth"),
+                    resultSet.getString("lastname"),
+                    resultSet.getString("family_name"),
+                    resultSet.getDate("date_of_birth"),
                     resultSet.getString("country"),
-                    resultSet.getDate("dateofdeath"));
+                    resultSet.getDate("date_of_death"));
             artists.add(artist);
         }
         return artists;

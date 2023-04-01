@@ -10,9 +10,9 @@ import java.util.Date;
 public class artistDAO {
     private Integer id;
     String firstname;
-    String secondname;
-    String familyname;
-    Date dateofbirth;
+    String lastname;
+    String familyName;
+    Date dateOfBirth;
     String country;
-    Date dateofdeath;
+    Date dateOfDeath;
 }

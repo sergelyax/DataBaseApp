@@ -8,7 +8,7 @@ import java.util.Collection;
 
 public interface artist {
 
-   Object findAllartist() throws SQLException;
+    Object findAllartist() throws SQLException;
 
     Collection<artistDAO> findAllartistbycountry(String country) throws SQLException;
 
